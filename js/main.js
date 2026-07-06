@@ -118,6 +118,50 @@
   /* ---------- Footer year ---------- */
   if (yearEl) yearEl.textContent = new Date().getFullYear();
 
+  /* ---------- Cyber Watch news feed ---------- */
+  var newsList = document.getElementById("cyberwatch-news-list");
+  if (newsList) {
+    var newsFeedUrl = "https://api.rss2json.com/v1/api.json?rss_url=" + encodeURIComponent("https://feeds.feedburner.com/TheHackersNews");
+
+    fetch(newsFeedUrl)
+      .then(function (response) { return response.json(); })
+      .then(function (data) {
+        if (data.status !== "ok" || !data.items || !data.items.length) throw new Error("Feed unavailable");
+
+        var lang = getLang();
+        var locale = lang === "fr" ? "fr-FR" : "en-US";
+        newsList.innerHTML = "";
+
+        data.items.slice(0, 6).forEach(function (item) {
+          var li = document.createElement("li");
+          li.className = "cyberwatch-news-item";
+
+          var link = document.createElement("a");
+          link.href = item.link;
+          link.target = "_blank";
+          link.rel = "noopener noreferrer";
+          link.textContent = item.title;
+
+          var date = document.createElement("span");
+          date.className = "cyberwatch-news-date";
+          var parsedDate = new Date(item.pubDate);
+          date.textContent = isNaN(parsedDate) ? "" : parsedDate.toLocaleDateString(locale, { day: "numeric", month: "short", year: "numeric" });
+
+          li.appendChild(link);
+          li.appendChild(date);
+          newsList.appendChild(li);
+        });
+      })
+      .catch(function () {
+        var dict = translations[getLang()] || translations.fr;
+        newsList.innerHTML = "";
+        var li = document.createElement("li");
+        li.className = "cyberwatch-news-status";
+        li.textContent = dict["cyberwatch.news_error"];
+        newsList.appendChild(li);
+      });
+  }
+
   /* ---------- Contact form (Formspree) ---------- */
   if (form) {
     form.addEventListener("submit", function (event) {

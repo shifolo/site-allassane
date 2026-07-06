@@ -38,6 +38,7 @@
           <li><a href="#about" class="nav-link" data-i18n="nav.about">À propos</a></li>
           <li><a href="#skills" class="nav-link" data-i18n="nav.skills">Compétences</a></li>
           <li><a href="#training" class="nav-link" data-i18n="nav.training">Formation</a></li>
+          <li><a href="#cyberwatch" class="nav-link" data-i18n="nav.cyberwatch">Veille Cyber</a></li>
           <li><a href="#projects" class="nav-link" data-i18n="nav.projects">Projets</a></li>
           <li><a href="#testimonials" class="nav-link" data-i18n="nav.testimonials">Témoignages</a></li>
           <li><a href="#news" class="nav-link" data-i18n="nav.news">Actualités</a></li>
@@ -210,6 +211,32 @@
           <a href="https://wa.me/2250767490189" target="_blank" rel="noopener noreferrer" class="btn btn-outline" id="whatsapp-cta">
             <span data-i18n="training.cta_whatsapp">Session individuelle (WhatsApp)</span>
           </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CYBER WATCH -->
+    <section id="cyberwatch" class="cyberwatch">
+      <div class="container">
+        <p class="eyebrow" data-i18n="cyberwatch.eyebrow">Veille Cybersécurité</p>
+        <h2 class="section-title" data-i18n="cyberwatch.title">Cybermenaces en temps réel</h2>
+        <p class="section-subtitle" data-i18n="cyberwatch.subtitle">Un aperçu en direct de l'activité mondiale des cyberattaques, et les dernières actualités du secteur.</p>
+
+        <div class="cyberwatch-grid">
+          <div class="cyberwatch-map">
+            <iframe
+              src="https://cybermap.kaspersky.com/en/widget/dynamic/dark"
+              title="Carte mondiale des cyberattaques en temps réel (Kaspersky)"
+              loading="lazy" frameborder="0"></iframe>
+          </div>
+
+          <div class="cyberwatch-news">
+            <h3 data-i18n="cyberwatch.news_title">Dernières actualités</h3>
+            <ul class="cyberwatch-news-list" id="cyberwatch-news-list">
+              <li class="cyberwatch-news-status" data-i18n="cyberwatch.news_loading">Chargement des actualités...</li>
+            </ul>
+            <a href="https://thehackernews.com" target="_blank" rel="noopener noreferrer" class="cyberwatch-news-link" data-i18n="cyberwatch.news_visit">Voir plus d'actualités</a>
+          </div>
         </div>
       </div>
     </section>
