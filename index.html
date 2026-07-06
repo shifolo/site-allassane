@@ -223,11 +223,27 @@
         <p class="section-subtitle" data-i18n="cyberwatch.subtitle">Un aperçu en direct de l'activité mondiale des cyberattaques, et les dernières actualités du secteur.</p>
 
         <div class="cyberwatch-grid">
-          <div class="cyberwatch-map">
-            <iframe
-              src="https://cybermap.kaspersky.com/en/widget/dynamic/dark"
-              title="Carte mondiale des cyberattaques en temps réel (Kaspersky)"
-              loading="lazy" frameborder="0"></iframe>
+          <div class="cyberwatch-map-card">
+            <div class="cyberwatch-map-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg>
+            </div>
+            <h3 data-i18n="cyberwatch.map_title">Carte mondiale des cyberattaques</h3>
+            <p data-i18n="cyberwatch.map_desc">Visualisez en direct les cyberattaques en cours à travers le monde.</p>
+            <a href="https://cybermap.kaspersky.com/" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+              <span data-i18n="cyberwatch.map_cta">Voir la carte en direct</span>
+            </a>
+
+            <div class="cyberwatch-resources">
+              <h4 data-i18n="cyberwatch.resources_title">Ressources utiles</h4>
+              <ul>
+                <li>
+                  <a href="https://owasp.org" target="_blank" rel="noopener noreferrer">
+                    <span class="cyberwatch-resource-name">OWASP</span>
+                    <span class="cyberwatch-resource-desc" data-i18n="cyberwatch.resource_owasp_desc">Référence mondiale des bonnes pratiques en sécurité applicative.</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
           </div>
 
           <div class="cyberwatch-news">
