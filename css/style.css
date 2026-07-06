@@ -424,55 +424,64 @@ section { padding: 96px 0; }
 }
 
 .cyberwatch-map-card {
-  background: linear-gradient(160deg, var(--color-ink) 0%, var(--color-ink-soft) 60%, #0c4a5c 130%);
-  color: var(--color-on-dark);
+  background: var(--color-ink);
   border-radius: var(--radius);
   border: 1px solid var(--color-border);
-  min-height: 420px;
-  padding: 40px 36px;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
 }
 
-.cyberwatch-map-icon {
-  width: 56px;
-  height: 56px;
-  border-radius: 14px;
-  background: rgba(34, 211, 238, 0.15);
-  color: var(--color-accent-light);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 22px;
+.cyberwatch-map-embed { position: relative; flex: 1; min-height: 480px; }
+.cyberwatch-map-embed iframe {
+  width: 100%;
+  height: 100%;
+  min-height: 480px;
+  border: none;
+  display: block;
 }
-.cyberwatch-map-icon svg { width: 28px; height: 28px; }
 
-.cyberwatch-map-card h3 { font-size: 1.25rem; margin-bottom: 10px; }
-.cyberwatch-map-card > p { color: var(--color-on-dark-muted); margin-bottom: 24px; max-width: 380px; }
-.cyberwatch-map-card .btn { align-self: flex-start; }
+.cyberwatch-map-fullscreen {
+  display: block;
+  text-align: center;
+  padding: 14px;
+  color: var(--color-accent-light);
+  font-weight: 600;
+  font-size: 0.9rem;
+  background: var(--color-ink-soft);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+.cyberwatch-map-fullscreen:hover { text-decoration: underline; }
 
-.cyberwatch-resources { margin-top: auto; padding-top: 32px; }
+.cyberwatch-resources {
+  margin-top: 24px;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 28px 32px;
+}
 .cyberwatch-resources h4 {
   font-size: 0.8rem;
   font-weight: 600;
   letter-spacing: 0.04em;
   text-transform: uppercase;
-  color: var(--color-on-dark-muted);
-  margin-bottom: 12px;
+  color: var(--color-text-muted);
+  margin-bottom: 14px;
 }
-.cyberwatch-resources ul { display: flex; flex-direction: column; gap: 10px; }
+.cyberwatch-resources ul { display: flex; flex-wrap: wrap; gap: 12px; }
 .cyberwatch-resources a {
   display: flex;
   flex-direction: column;
   gap: 2px;
-  padding: 12px 14px;
+  padding: 14px 18px;
   border-radius: 10px;
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  border: 1px solid var(--color-border);
+  min-width: 220px;
   transition: border-color var(--transition), background var(--transition);
 }
-.cyberwatch-resources a:hover { border-color: var(--color-accent-light); background: rgba(34, 211, 238, 0.08); }
-.cyberwatch-resource-name { font-weight: 700; color: var(--color-on-dark); font-size: 0.92rem; }
-.cyberwatch-resource-desc { color: var(--color-on-dark-muted); font-size: 0.82rem; }
+.cyberwatch-resources a:hover { border-color: var(--color-accent); background: rgba(8, 145, 178, 0.05); }
+.cyberwatch-resource-name { font-weight: 700; color: var(--color-ink); font-size: 0.92rem; }
+.cyberwatch-resource-desc { color: var(--color-text-muted); font-size: 0.82rem; }
 
 .cyberwatch-news {
   background: var(--color-surface);
@@ -481,7 +490,7 @@ section { padding: 96px 0; }
   padding: 28px;
   display: flex;
   flex-direction: column;
-  min-height: 420px;
+  min-height: 520px;
 }
 .cyberwatch-news h3 { font-size: 1.05rem; color: var(--color-ink); margin-bottom: 16px; }
 
