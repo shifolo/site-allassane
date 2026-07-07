@@ -131,13 +131,14 @@ section { padding: 96px 0; }
 
 .main-nav ul {
   display: flex;
-  gap: 20px;
+  gap: 14px;
 }
 
 .nav-link {
   color: var(--color-on-dark-muted);
   font-weight: 500;
-  font-size: 0.95rem;
+  font-size: 0.85rem;
+  white-space: nowrap;
   position: relative;
   padding: 6px 0;
   transition: color var(--transition);
@@ -891,9 +892,7 @@ section { padding: 96px 0; }
   .hero-tagline { margin-inline: auto; }
 }
 
-@media (max-width: 720px) {
-  section { padding: 72px 0; }
-
+@media (max-width: 1050px) {
   .main-nav {
     position: fixed;
     top: 72px;
@@ -914,6 +913,10 @@ section { padding: 96px 0; }
   .nav-toggle.open .nav-toggle-bar:nth-child(1) { transform: translateY(7px) rotate(45deg); }
   .nav-toggle.open .nav-toggle-bar:nth-child(2) { opacity: 0; }
   .nav-toggle.open .nav-toggle-bar:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+}
+
+@media (max-width: 720px) {
+  section { padding: 72px 0; }
 
   .skills-grid,
   .training-grid,

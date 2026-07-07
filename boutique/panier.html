@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Panier — Allassane Coulibaly</title>
+  <meta name="description" content="Votre panier — Boutique cybersécurité d'Allassane Coulibaly.">
+
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230f172a'/%3E%3Ctext x='32' y='42' font-family='Arial, sans-serif' font-size='26' font-weight='700' fill='%2322d3ee' text-anchor='middle'%3EAC%3C/text%3E%3C/svg%3E">
+
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/shop.css">
+</head>
+<body>
+
+  <a class="skip-link" href="#main">Aller au contenu principal</a>
+
+  <header class="site-header" id="site-header">
+    <div class="container header-inner">
+      <a href="../index.html#hero" class="logo">Allassane<span>Coulibaly</span></a>
+
+      <nav class="main-nav" id="main-nav">
+        <ul>
+          <li><a href="../index.html#hero" class="nav-link" data-i18n="nav.home">Accueil</a></li>
+          <li><a href="../index.html#about" class="nav-link" data-i18n="nav.about">À propos</a></li>
+          <li><a href="../index.html#skills" class="nav-link" data-i18n="nav.skills">Compétences</a></li>
+          <li><a href="../index.html#training" class="nav-link" data-i18n="nav.training">Formation</a></li>
+          <li><a href="../index.html#cyberwatch" class="nav-link" data-i18n="nav.cyberwatch">Veille Cyber</a></li>
+          <li><a href="../index.html#projects" class="nav-link" data-i18n="nav.projects">Projets</a></li>
+          <li><a href="../index.html#testimonials" class="nav-link" data-i18n="nav.testimonials">Témoignages</a></li>
+          <li><a href="../index.html#news" class="nav-link" data-i18n="nav.news">Actualités</a></li>
+          <li><a href="../index.html#blog" class="nav-link" data-i18n="nav.blog">Blog</a></li>
+          <li><a href="index.html" class="nav-link active" data-i18n="nav.shop">Boutique</a></li>
+          <li><a href="../index.html#contact" class="nav-link" data-i18n="nav.contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <a href="panier.html" class="cart-link" aria-label="Panier">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+          <span class="cart-badge" id="cart-count">0</span>
+        </a>
+        <button id="lang-toggle" class="lang-toggle" type="button" aria-label="Changer de langue">
+          <span data-i18n="nav.lang_toggle">EN</span>
+        </button>
+        <button id="nav-toggle" class="nav-toggle" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="Ouvrir le menu">
+          <span class="nav-toggle-bar"></span>
+          <span class="nav-toggle-bar"></span>
+          <span class="nav-toggle-bar"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="shop-page-header">
+      <div class="container">
+        <p class="eyebrow" data-i18n="cart.title">Mon panier</p>
+        <h1 class="section-title" data-i18n="cart.title">Mon panier</h1>
+      </div>
+    </section>
+
+    <section class="shop-section">
+      <div class="container">
+        <div id="cart-page">
+          <div id="cart-items"></div>
+          <div id="cart-summary"></div>
+
+          <!-- Remplacer YOUR_ORDER_FORM_ID par ton propre endpoint Formspree dédié aux commandes -->
+          <form id="checkout-form" class="checkout-form contact-form" action="https://formspree.io/f/YOUR_ORDER_FORM_ID" method="POST">
+            <h2 data-i18n="cart.checkout_title">Finaliser la commande</h2>
+            <input type="hidden" name="order_summary">
+
+            <div class="form-group">
+              <label for="checkout-name" data-i18n="checkout.form_name">Nom complet</label>
+              <input type="text" id="checkout-name" name="name" required>
+            </div>
+            <div class="form-group">
+              <label for="checkout-email" data-i18n="checkout.form_email">Adresse email</label>
+              <input type="email" id="checkout-email" name="email" required>
+            </div>
+            <div class="form-group">
+              <label for="checkout-phone" data-i18n="checkout.form_phone">Téléphone</label>
+              <input type="tel" id="checkout-phone" name="phone" required>
+            </div>
+
+            <div id="delivery-fields">
+              <div class="form-group">
+                <label for="checkout-address" data-i18n="checkout.form_address">Adresse de livraison</label>
+                <input type="text" id="checkout-address" name="address">
+              </div>
+              <div class="form-group">
+                <label for="checkout-city" data-i18n="checkout.form_city">Ville</label>
+                <input type="text" id="checkout-city" name="city">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label data-i18n="checkout.payment_method_label">Moyen de paiement souhaité</label>
+              <div class="payment-method-options">
+                <label><input type="radio" name="payment_method" value="Orange Money" checked> <span data-i18n="checkout.payment_orange">Orange Money</span></label>
+                <label><input type="radio" name="payment_method" value="Wave"> <span data-i18n="checkout.payment_wave">Wave</span></label>
+                <label><input type="radio" name="payment_method" value="MTN Mobile Money"> <span data-i18n="checkout.payment_mtn">MTN Mobile Money</span></label>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="checkout-notes" data-i18n="checkout.form_notes">Notes (optionnel)</label>
+              <textarea id="checkout-notes" name="notes" rows="3"></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary form-submit" data-i18n="checkout.submit">Confirmer la commande</button>
+            <p class="form-status" id="checkout-status" role="status" aria-live="polite"></p>
+          </form>
+
+          <div class="confirmation-panel" id="checkout-confirmation" hidden>
+            <h2 data-i18n="checkout.confirmation_title">Merci pour votre commande !</h2>
+            <p data-i18n="checkout.confirmation_payment_instructions">Vous allez recevoir sous peu les instructions de paiement Mobile Money par email ou WhatsApp. Votre commande sera traitée dès confirmation du paiement.</p>
+            <p id="confirmation-digital-note" data-i18n="checkout.confirmation_digital_note">Les produits numériques sont livrés manuellement par email après confirmation du paiement.</p>
+            <p id="confirmation-physical-note" data-i18n="checkout.confirmation_physical_note">Les produits physiques sont expédiés après confirmation du paiement.</p>
+            <div id="confirmation-summary"></div>
+            <a href="#" id="checkout-whatsapp-link" target="_blank" rel="noopener noreferrer" class="btn btn-outline" data-i18n="checkout.whatsapp_cta">Notifier ma commande sur WhatsApp</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; <span id="year"></span> Allassane Coulibaly. <span data-i18n="footer.rights">Tous droits réservés.</span></p>
+      <a href="#main" class="back-to-top" data-i18n="footer.backtotop">Haut de page</a>
+    </div>
+  </footer>
+
+  <script src="../data/translations.js"></script>
+  <script src="../data/products.js"></script>
+  <script src="../js/cart.js"></script>
+  <script src="../js/main.js"></script>
+</body>
+</html>

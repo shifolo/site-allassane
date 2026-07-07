@@ -60,6 +60,7 @@
   function setLang(lang) {
     localStorage.setItem(STORAGE_KEY, lang);
     applyTranslations(lang);
+    window.dispatchEvent(new CustomEvent("langchange", { detail: { lang: lang } }));
   }
 
   if (langToggleBtn) {

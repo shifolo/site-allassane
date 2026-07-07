@@ -23,6 +23,7 @@
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230f172a'/%3E%3Ctext x='32' y='42' font-family='Arial, sans-serif' font-size='26' font-weight='700' fill='%2322d3ee' text-anchor='middle'%3EAC%3C/text%3E%3C/svg%3E">
 
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/shop.css">
 </head>
 <body>
 
@@ -43,11 +44,16 @@
           <li><a href="#testimonials" class="nav-link" data-i18n="nav.testimonials">Témoignages</a></li>
           <li><a href="#news" class="nav-link" data-i18n="nav.news">Actualités</a></li>
           <li><a href="#blog" class="nav-link" data-i18n="nav.blog">Blog</a></li>
+          <li><a href="boutique/index.html" class="nav-link" data-i18n="nav.shop">Boutique</a></li>
           <li><a href="#contact" class="nav-link" data-i18n="nav.contact">Contact</a></li>
         </ul>
       </nav>
 
       <div class="header-actions">
+        <a href="boutique/panier.html" class="cart-link" aria-label="Panier">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+          <span class="cart-badge" id="cart-count">0</span>
+        </a>
         <button id="lang-toggle" class="lang-toggle" type="button" aria-label="Changer de langue">
           <span data-i18n="nav.lang_toggle">EN</span>
         </button>
@@ -553,6 +559,8 @@
   </footer>
 
   <script src="data/translations.js"></script>
+  <script src="data/products.js"></script>
+  <script src="js/cart.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>
