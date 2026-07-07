@@ -18,12 +18,11 @@ const translations = {
     "nav.menu_open": "Ouvrir le menu",
     "nav.menu_close": "Fermer le menu",
 
-    "hero.greeting": "Bonjour, je suis",
-    "hero.role": "Fondateur & CEO de WEKO Technologies",
-    "hero.role_secondary": "Étudiant en Master Cybersécurité — IIT Grand-Bassam",
-    "hero.tagline": "Je conçois des solutions SaaS et je sécurise les systèmes qui font tourner les entreprises africaines de demain.",
-    "hero.cta_projects": "Voir mes projets",
+    "hero.title1": "Fondateur & CEO — WEKO Technologies",
+    "hero.title2": "Secrétaire Général — JCI Cocody",
+    "hero.quote": "« Bâtir un écosystème technologique africain plus fort, plus sûr et plus engagé. »",
     "hero.cta_contact": "Me contacter",
+    "hero.cta_about": "Découvrir mon parcours",
     "hero.scroll": "Découvrir",
 
     "about.eyebrow": "À propos",
@@ -226,12 +225,11 @@ const translations = {
     "nav.menu_open": "Open menu",
     "nav.menu_close": "Close menu",
 
-    "hero.greeting": "Hi, I'm",
-    "hero.role": "Founder & CEO of WEKO Technologies",
-    "hero.role_secondary": "Master's Student in Cybersecurity — IIT Grand-Bassam",
-    "hero.tagline": "I build SaaS solutions and secure the systems powering tomorrow's African businesses.",
-    "hero.cta_projects": "View my projects",
+    "hero.title1": "Founder & CEO — WEKO Technologies",
+    "hero.title2": "Secretary General — JCI Cocody",
+    "hero.quote": "“Building a stronger, safer, and more engaged African tech ecosystem.”",
     "hero.cta_contact": "Get in touch",
+    "hero.cta_about": "Discover my journey",
     "hero.scroll": "Explore",
 
     "about.eyebrow": "About",

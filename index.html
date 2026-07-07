@@ -38,9 +38,9 @@
           <li><a href="#hero" class="nav-link" data-i18n="nav.home">Accueil</a></li>
           <li><a href="#about" class="nav-link" data-i18n="nav.about">À propos</a></li>
           <li><a href="#skills" class="nav-link" data-i18n="nav.skills">Compétences</a></li>
+          <li><a href="#projects" class="nav-link" data-i18n="nav.projects">Projets</a></li>
           <li><a href="#training" class="nav-link" data-i18n="nav.training">Formation</a></li>
           <li><a href="#cyberwatch" class="nav-link" data-i18n="nav.cyberwatch">Veille Cyber</a></li>
-          <li><a href="#projects" class="nav-link" data-i18n="nav.projects">Projets</a></li>
           <li><a href="#testimonials" class="nav-link" data-i18n="nav.testimonials">Témoignages</a></li>
           <li><a href="#news" class="nav-link" data-i18n="nav.news">Actualités</a></li>
           <li><a href="#blog" class="nav-link" data-i18n="nav.blog">Blog</a></li>
@@ -72,18 +72,25 @@
     <section id="hero" class="hero">
       <div class="container hero-inner">
         <div class="hero-text">
-          <p class="eyebrow hero-greeting" data-i18n="hero.greeting">Bonjour, je suis</p>
-          <h1 class="hero-name">Allassane Coulibaly</h1>
-          <p class="hero-role" data-i18n="hero.role">Fondateur &amp; CEO de WEKO Technologies</p>
-          <p class="hero-role-secondary" data-i18n="hero.role_secondary">Étudiant en Master Cybersécurité — IIT Grand-Bassam</p>
-          <p class="hero-tagline" data-i18n="hero.tagline">Je conçois des solutions SaaS et je sécurise les systèmes qui font tourner les entreprises africaines de demain.</p>
+          <div class="hero-monogram" aria-hidden="true">AC</div>
+          <h1 class="hero-name">Allassane<br>Coulibaly</h1>
+
+          <div class="hero-titles">
+            <p data-i18n="hero.title1">Fondateur &amp; CEO — WEKO Technologies</p>
+            <p data-i18n="hero.title2">Secrétaire Général — JCI Cocody</p>
+          </div>
+
+          <div class="hero-gold-rule" aria-hidden="true"></div>
+
+          <p class="hero-quote" data-i18n="hero.quote">« Bâtir un écosystème technologique africain plus fort, plus sûr et plus engagé. »</p>
+
           <div class="hero-cta">
-            <a href="#projects" class="btn btn-primary" data-i18n="hero.cta_projects">Voir mes projets</a>
-            <a href="#contact" class="btn btn-outline" data-i18n="hero.cta_contact">Me contacter</a>
+            <a href="#contact" class="btn btn-primary" data-i18n="hero.cta_contact">Me contacter</a>
+            <a href="#about" class="btn btn-outline" data-i18n="hero.cta_about">Découvrir mon parcours</a>
           </div>
         </div>
         <div class="hero-media">
-          <div class="hero-photo-frame">
+          <div class="hero-portrait-frame">
             <img src="assets/img/profile.jpg" alt="Allassane Coulibaly" class="hero-photo" onerror="this.parentElement.classList.add('img-fallback')">
           </div>
         </div>
@@ -179,6 +186,59 @@
       </div>
     </section>
 
+    <!-- PROJECTS -->
+    <section id="projects" class="projects">
+      <div class="container">
+        <p class="eyebrow" data-i18n="projects.eyebrow">Portfolio</p>
+        <h2 class="section-title" data-i18n="projects.title">Mes projets</h2>
+        <p class="section-subtitle" data-i18n="projects.subtitle">Une sélection de projets menés à titre professionnel et personnel.</p>
+
+        <div class="projects-grid">
+          <article class="project-card">
+            <div class="project-media">
+              <img src="assets/img/project-weko.jpg" alt="WEKO Technologies" onerror="this.parentElement.classList.add('img-fallback')">
+            </div>
+            <div class="project-body">
+              <h3 data-i18n="projects.weko_title">WEKO Technologies</h3>
+              <p data-i18n="projects.weko_desc">Plateforme SaaS développée par mon entreprise pour digitaliser et sécuriser les processus des PME ivoiriennes.</p>
+              <div class="project-tags">
+                <span>SaaS</span><span>Cloud</span><span>Sécurité</span>
+              </div>
+              <a href="#" class="project-link" data-i18n="projects.cta_view">Voir le projet</a>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-media">
+              <img src="assets/img/project-security.jpg" alt="Audit de vulnérabilités" onerror="this.parentElement.classList.add('img-fallback')">
+            </div>
+            <div class="project-body">
+              <h3 data-i18n="projects.security_title">Audit &amp; Scan de Vulnérabilités</h3>
+              <p data-i18n="projects.security_desc">Outil d'analyse automatisée pour identifier les failles de sécurité réseau et applicatives.</p>
+              <div class="project-tags">
+                <span>Pentest</span><span>Réseau</span><span>Python</span>
+              </div>
+              <a href="#" class="project-link" data-i18n="projects.cta_view">Voir le projet</a>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-media">
+              <img src="assets/img/project-saas.jpg" alt="Application de gestion SaaS" onerror="this.parentElement.classList.add('img-fallback')">
+            </div>
+            <div class="project-body">
+              <h3 data-i18n="projects.saas_title">Application de Gestion SaaS</h3>
+              <p data-i18n="projects.saas_desc">Solution de gestion en ligne pensée pour les petites structures, avec authentification sécurisée.</p>
+              <div class="project-tags">
+                <span>Web App</span><span>Auth</span><span>API</span>
+              </div>
+              <a href="#" class="project-link" data-i18n="projects.cta_view">Voir le projet</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
     <!-- TRAINING -->
     <section id="training" class="training">
       <div class="container">
@@ -258,59 +318,6 @@
               </a>
             </li>
           </ul>
-        </div>
-      </div>
-    </section>
-
-    <!-- PROJECTS -->
-    <section id="projects" class="projects">
-      <div class="container">
-        <p class="eyebrow" data-i18n="projects.eyebrow">Portfolio</p>
-        <h2 class="section-title" data-i18n="projects.title">Mes projets</h2>
-        <p class="section-subtitle" data-i18n="projects.subtitle">Une sélection de projets menés à titre professionnel et personnel.</p>
-
-        <div class="projects-grid">
-          <article class="project-card">
-            <div class="project-media">
-              <img src="assets/img/project-weko.jpg" alt="WEKO Technologies" onerror="this.parentElement.classList.add('img-fallback')">
-            </div>
-            <div class="project-body">
-              <h3 data-i18n="projects.weko_title">WEKO Technologies</h3>
-              <p data-i18n="projects.weko_desc">Plateforme SaaS développée par mon entreprise pour digitaliser et sécuriser les processus des PME ivoiriennes.</p>
-              <div class="project-tags">
-                <span>SaaS</span><span>Cloud</span><span>Sécurité</span>
-              </div>
-              <a href="#" class="project-link" data-i18n="projects.cta_view">Voir le projet</a>
-            </div>
-          </article>
-
-          <article class="project-card">
-            <div class="project-media">
-              <img src="assets/img/project-security.jpg" alt="Audit de vulnérabilités" onerror="this.parentElement.classList.add('img-fallback')">
-            </div>
-            <div class="project-body">
-              <h3 data-i18n="projects.security_title">Audit &amp; Scan de Vulnérabilités</h3>
-              <p data-i18n="projects.security_desc">Outil d'analyse automatisée pour identifier les failles de sécurité réseau et applicatives.</p>
-              <div class="project-tags">
-                <span>Pentest</span><span>Réseau</span><span>Python</span>
-              </div>
-              <a href="#" class="project-link" data-i18n="projects.cta_view">Voir le projet</a>
-            </div>
-          </article>
-
-          <article class="project-card">
-            <div class="project-media">
-              <img src="assets/img/project-saas.jpg" alt="Application de gestion SaaS" onerror="this.parentElement.classList.add('img-fallback')">
-            </div>
-            <div class="project-body">
-              <h3 data-i18n="projects.saas_title">Application de Gestion SaaS</h3>
-              <p data-i18n="projects.saas_desc">Solution de gestion en ligne pensée pour les petites structures, avec authentification sécurisée.</p>
-              <div class="project-tags">
-                <span>Web App</span><span>Auth</span><span>API</span>
-              </div>
-              <a href="#" class="project-link" data-i18n="projects.cta_view">Voir le projet</a>
-            </div>
-          </article>
         </div>
       </div>
     </section>

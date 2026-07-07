@@ -21,8 +21,10 @@ button { font: inherit; cursor: pointer; border: none; background: none; color: 
   --color-accent-light: #22d3ee;
   --color-on-dark: #f1f5f9;
   --color-on-dark-muted: #94a3b8;
+  --color-gold: #c9a961;
 
   --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-serif: Georgia, "Times New Roman", Times, serif;
 
   --container-width: 1120px;
   --radius: 12px;
@@ -56,12 +58,15 @@ body {
 .skip-link:focus { left: 0; }
 
 .eyebrow {
+  display: inline-block;
   color: var(--color-accent);
   font-weight: 600;
   font-size: 0.85rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   margin-bottom: 8px;
+  padding-bottom: 6px;
+  border-bottom: 2px solid var(--color-gold);
 }
 
 .section-title {
@@ -201,32 +206,54 @@ section { padding: 96px 0; }
   min-height: 60vh;
 }
 
-.hero-greeting { color: var(--color-accent-light); }
+.hero-monogram {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  border: 1.5px solid var(--color-gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-serif);
+  font-size: 1.3rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: var(--color-gold);
+  margin-bottom: 24px;
+}
 
 .hero-name {
-  font-size: clamp(2.4rem, 5vw, 3.6rem);
-  font-weight: 800;
-  line-height: 1.1;
-  margin-bottom: 12px;
+  font-family: var(--font-serif);
+  font-size: clamp(2.4rem, 5vw, 3.8rem);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+  margin-bottom: 24px;
 }
 
-.hero-role {
-  font-size: 1.2rem;
+.hero-titles p {
+  font-size: 1.05rem;
   font-weight: 600;
   color: var(--color-on-dark);
-  margin-bottom: 4px;
+  margin-bottom: 6px;
 }
 
-.hero-role-secondary {
-  color: var(--color-on-dark-muted);
-  margin-bottom: 20px;
+.hero-gold-rule {
+  width: 64px;
+  height: 2px;
+  background: var(--color-gold);
+  margin: 24px 0;
 }
 
-.hero-tagline {
+.hero-quote {
+  font-family: var(--font-serif);
+  font-style: italic;
   color: var(--color-on-dark-muted);
   max-width: 480px;
   margin-bottom: 32px;
-  font-size: 1.05rem;
+  font-size: 1.1rem;
+  line-height: 1.6;
 }
 
 .hero-cta { display: flex; gap: 16px; flex-wrap: wrap; }
@@ -235,42 +262,40 @@ section { padding: 96px 0; }
 
 .hero-media { display: flex; justify-content: center; }
 
-.hero-photo-frame {
-  width: min(320px, 80%);
-  aspect-ratio: 1 / 1;
-  border-radius: 50%;
-  border: 3px solid var(--color-accent-light);
-  padding: 8px;
+.hero-portrait-frame {
+  width: min(340px, 100%);
+  aspect-ratio: 3 / 4;
+  border: 1.5px solid var(--color-gold);
+  padding: 10px;
   position: relative;
 }
-.hero-photo-frame::after {
+.hero-portrait-frame::after {
   content: "";
   position: absolute;
-  inset: -16px;
-  border-radius: 50%;
-  border: 1px solid rgba(34, 211, 238, 0.3);
+  inset: -10px;
+  border: 1px solid rgba(201, 169, 97, 0.3);
+  pointer-events: none;
 }
 .hero-photo {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 50%;
 }
-.hero-photo-frame.img-fallback {
+.hero-portrait-frame.img-fallback {
   background: linear-gradient(135deg, var(--color-ink-soft), var(--color-accent));
 }
-.hero-photo-frame.img-fallback .hero-photo { visibility: hidden; }
-.hero-photo-frame.img-fallback::before {
+.hero-portrait-frame.img-fallback .hero-photo { visibility: hidden; }
+.hero-portrait-frame.img-fallback::before {
   content: "AC";
   position: absolute;
-  inset: 8px;
-  border-radius: 50%;
+  inset: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 3rem;
+  font-family: var(--font-serif);
+  font-size: 3.5rem;
   font-weight: 700;
-  color: rgba(255,255,255,0.85);
+  color: rgba(255, 255, 255, 0.85);
 }
 
 .scroll-indicator {
@@ -889,7 +914,9 @@ section { padding: 96px 0; }
   .hero-inner { grid-template-columns: 1fr; text-align: center; }
   .hero-media { order: -1; }
   .hero-cta { justify-content: center; }
-  .hero-tagline { margin-inline: auto; }
+  .hero-quote { margin-inline: auto; }
+  .hero-monogram,
+  .hero-gold-rule { margin-inline: auto; }
 }
 
 @media (max-width: 1200px) {
