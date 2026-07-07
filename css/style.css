@@ -24,7 +24,6 @@ button { font: inherit; cursor: pointer; border: none; background: none; color: 
   --color-gold: #c9a961;
 
   --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  --font-serif: Georgia, "Times New Roman", Times, serif;
 
   --container-width: 1120px;
   --radius: 12px;
@@ -214,21 +213,17 @@ section { padding: 96px 0; }
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: var(--font-serif);
   font-size: 1.3rem;
-  font-weight: 700;
-  letter-spacing: 0.04em;
+  font-weight: 800;
+  letter-spacing: 0.02em;
   color: var(--color-gold);
   margin-bottom: 24px;
 }
 
 .hero-name {
-  font-family: var(--font-serif);
-  font-size: clamp(2.4rem, 5vw, 3.8rem);
-  font-weight: 700;
-  line-height: 1.15;
-  letter-spacing: 0.01em;
-  text-transform: uppercase;
+  font-size: clamp(2.4rem, 5vw, 3.6rem);
+  font-weight: 800;
+  line-height: 1.1;
   margin-bottom: 24px;
 }
 
@@ -247,7 +242,6 @@ section { padding: 96px 0; }
 }
 
 .hero-quote {
-  font-family: var(--font-serif);
   font-style: italic;
   color: var(--color-on-dark-muted);
   max-width: 480px;
@@ -292,9 +286,8 @@ section { padding: 96px 0; }
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: var(--font-serif);
   font-size: 3.5rem;
-  font-weight: 700;
+  font-weight: 800;
   color: rgba(255, 255, 255, 0.85);
 }
 
