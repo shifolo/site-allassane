@@ -892,7 +892,7 @@ section { padding: 96px 0; }
   .hero-tagline { margin-inline: auto; }
 }
 
-@media (max-width: 1050px) {
+@media (max-width: 1200px) {
   .main-nav {
     position: fixed;
     top: 72px;
