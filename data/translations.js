@@ -150,6 +150,7 @@ const translations = {
     "contact.form_success": "Merci ! Votre message a bien été envoyé.",
     "contact.form_error": "Une erreur est survenue. Merci de réessayer ou de m'écrire directement par email.",
     "contact.direct_title": "Autres moyens de me contacter",
+    "contact.whatsapp_float_message": "Bonjour Allassane, je vous contacte depuis votre site web.",
 
     "footer.rights": "Tous droits réservés.",
     "footer.backtotop": "Haut de page",
@@ -360,6 +361,7 @@ const translations = {
     "contact.form_success": "Thank you! Your message has been sent.",
     "contact.form_error": "Something went wrong. Please try again or email me directly.",
     "contact.direct_title": "Other ways to reach me",
+    "contact.whatsapp_float_message": "Hello Allassane, I'm reaching out from your website.",
 
     "footer.rights": "All rights reserved.",
     "footer.backtotop": "Back to top",

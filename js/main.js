@@ -55,6 +55,12 @@
       var whatsappPhone = "2250767490189";
       whatsappBtn.href = "https://wa.me/" + whatsappPhone + "?text=" + encodeURIComponent(dict["training.whatsapp_message"]);
     }
+
+    var whatsappFloat = document.getElementById("whatsapp-float");
+    if (whatsappFloat && dict["contact.whatsapp_float_message"]) {
+      var whatsappFloatPhone = "2250767490189";
+      whatsappFloat.href = "https://wa.me/" + whatsappFloatPhone + "?text=" + encodeURIComponent(dict["contact.whatsapp_float_message"]);
+    }
   }
 
   function setLang(lang) {

@@ -906,6 +906,31 @@ section { padding: 96px 0; }
 .back-to-top { color: var(--color-accent-light); font-weight: 600; }
 .back-to-top:hover { text-decoration: underline; }
 
+/* ---------- Floating WhatsApp button ---------- */
+.whatsapp-float {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: #25d366;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+  z-index: 900;
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+.whatsapp-float:hover { transform: translateY(-3px) scale(1.05); box-shadow: 0 10px 26px rgba(0, 0, 0, 0.3); }
+.whatsapp-float svg { width: 28px; height: 28px; }
+
+@media (max-width: 480px) {
+  .whatsapp-float { right: 16px; bottom: 16px; width: 50px; height: 50px; }
+  .whatsapp-float svg { width: 25px; height: 25px; }
+}
+
 /* ---------- Responsive ---------- */
 @media (max-width: 960px) {
   .about-grid,
